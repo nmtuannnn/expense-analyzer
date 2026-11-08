@@ -28,5 +28,29 @@ So I wrote my own parser. It reads the string one character at a time and turns 
 - It counts the digits after the point and pads them to two places ("3.6" -> 360 cents, "7" -> 700 cents).
 - It rejects letters, a second dot, more than two decimal digits, and empty strings.
 
-## What I learned
-Real data is never clean. Code that works on a perfect sample file is not enough. It should also refuse bad input and say clearly where the problem is.
+## 5. Keeping every transaction
+My first program only kept a running total. Each new line overwrote the old one, so after the loop I could not ask questions like "how much did I spend on Grab?".
+- I now store each transaction in a `struct` (date, description, category, amount) inside an array.
+- I have to copy the text with `snprintf`. If I only saved the pointers from `strtok`, every transaction would point into the same `line` buffer, and all of them would show the last line of the file.
+- The array has a fixed size (`MAX_TRANSACTIONS`), so I check the count before saving and stop with "Overlimit!" instead of writing outside the array.
+
+I also found a small bug here. I added each amount to the total before checking the limit. If the file was too long, the last transaction would be counted in the total but not saved in the array, so the two would not match. I moved the total so that it only adds an amount after the transaction is saved.
+
+## 6. Printing a readable table
+- I use fixed widths in `printf`: `%-12s` for text (left aligned) and `%7ld.%02ld` for money (right aligned), so the dots in the amounts line up.
+- `%-20.20s` cuts long descriptions to 20 characters, so one long name does not push the whole row out of line.
+- At one point I printed the total with `%d`. The result looked correct, but `gcc` warned me, because `total` is a `long`. It only worked by luck. Since then I compile with `-Wall -Wextra` and read every warning, not just whether the program runs.
+
+## 7. Sorting transactions into categories
+I match each description against a list of keywords with `strstr` (for example GRAB -> Transport, NTUC -> Groceries). If nothing matches, the category is "Other".
+- The first rule that matches wins. So "GRABFOOD KFC" was first sorted as Transport, because GRAB came before any food rule. I fixed this by putting specific keywords (GRABFOOD, SHOPEEFOOD) above general ones (GRAB, SHOPEE).
+- The main weakness of this method is that someone has to write the rules by hand, and any new shop falls into "Other". Yet most personal spending repeats: a small number of rules already covers most of my money.
+
+## 8. Moving the rules into `rules.txt`
+At first the rules were written inside the code, so changing one rule meant compiling again. I moved them into `rules.txt`, with about 150 common shops in Singapore and Vietnam.
+- The file uses the same format as the CSV (`KEYWORD,Category`), so I read it with the same `fgets` + `strtok` method. Lines starting with `#` are comments, so I can group the rules by country and type.
+- Short keywords are risky with `strstr`. "TEA" also matches "STEAK HOUSE", and "BUS" also matches "BUSINESS CLASS". So I use full brand names, for example "M1 LIMITED" instead of "M1".
+- I left out payment apps such as MoMo, ZaloPay and PayLah on purpose. They show how I paid, not what I bought.
+-git add NOTES.md
+git commit -m "Update development notes"
+git push
