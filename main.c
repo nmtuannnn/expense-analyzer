@@ -18,6 +18,11 @@ int main(void) {
         char *desc = strtok(NULL, ",");
         char *amount = strtok(NULL, ",");
 
+        if (date == NULL || desc == NULL || amount == NULL){
+            printf("Error!!\n");
+            continue;
+        }
+
         printf("Date: %s | Description: %s | Amount: %s\n", date, desc, amount);
     }
     fclose(file);
