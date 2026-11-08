@@ -1,0 +1,198 @@
+# ===== Food delivery (must be above GRAB / SHOPEE) =====
+GRABFOOD,Food
+FOODPANDA,Food
+DELIVEROO,Food
+SHOPEEFOOD,Food
+ 
+# ===== Grocery delivery (must be above GRAB) =====
+GRABMART,Groceries
+REDMART,Groceries
+ 
+# ===== Transport - Singapore =====
+GRAB,Transport
+GOJEK,Transport
+TADA,Transport
+COMFORTDELGRO,Transport
+CDG ZIG,Transport
+SIMPLYGO,Transport
+TRANSITLINK,Transport
+EZ-LINK,Transport
+EZLINK,Transport
+BUS/MRT,Transport
+ 
+# ===== Transport - Vietnam =====
+XANH SM,Transport
+BE GROUP,Transport
+VETC,Transport
+EPASS,Transport
+ 
+# ===== Fuel =====
+SHELL,Transport
+ESSO,Transport
+CALTEX,Transport
+SINOPEC,Transport
+PETROLIMEX,Transport
+PVOIL,Transport
+ 
+# ===== Groceries - Singapore =====
+NTUC,Groceries
+FAIRPRICE,Groceries
+COLD STORAGE,Groceries
+SHENG SIONG,Groceries
+GIANT,Groceries
+DON DON DONKI,Groceries
+PRIME SUPERMARKET,Groceries
+7-ELEVEN,Groceries
+CHEERS,Groceries
+ 
+# ===== Groceries - Vietnam =====
+WINMART,Groceries
+BACH HOA XANH,Groceries
+COOPMART,Groceries
+CO.OPMART,Groceries
+CO.OP FOOD,Groceries
+BIG C,Groceries
+LOTTE MART,Groceries
+AEON,Groceries
+MM MEGA MARKET,Groceries
+KINGFOODMART,Groceries
+CIRCLE K,Groceries
+GS25,Groceries
+FAMILYMART,Groceries
+MINISTOP,Groceries
+ 
+# ===== Food & drinks - Singapore =====
+KOPITIAM,Food
+FOOD REPUBLIC,Food
+KOUFU,Food
+TOAST BOX,Food
+YA KUN,Food
+OLD CHANG KEE,Food
+BREADTALK,Food
+DIN TAI FUNG,Food
+HAIDILAO,Food
+SUSHI EXPRESS,Food
+PASTAMANIA,Food
+LIHO,Food
+CHAGEE,Food
+MIXUE,Food
+GONG CHA,Food
+LUCKIN,Food
+STARBUCKS,Food
+ 
+# ===== Food & drinks - Vietnam =====
+HIGHLANDS,Food
+PHUC LONG,Food
+THE COFFEE HOUSE,Food
+KATINAT,Food
+TRUNG NGUYEN,Food
+CONG CAPHE,Food
+LOTTERIA,Food
+PIZZA 4P,Food
+GOGI,Food
+ 
+# ===== Food & drinks - both countries =====
+MCDONALD,Food
+KFC,Food
+JOLLIBEE,Food
+BURGER KING,Food
+SUBWAY,Food
+PIZZA HUT,Food
+DOMINO,Food
+ 
+# ===== Health & pharmacy =====
+GUARDIAN,Health
+WATSONS,Health
+UNITY PHARMACY,Health
+POLYCLINIC,Health
+RAFFLES MEDICAL,Health
+PHARMACITY,Health
+LONG CHAU,Health
+AN KHANG,Health
+ 
+# ===== Shopping (online) =====
+SHOPEE,Shopping
+LAZADA,Shopping
+TAOBAO,Shopping
+AMAZON,Shopping
+TIKI,Shopping
+TIKTOK SHOP,Shopping
+ 
+# ===== Shopping (stores) =====
+UNIQLO,Shopping
+DAISO,Shopping
+MUJI,Shopping
+IKEA,Shopping
+DECATHLON,Shopping
+COURTS,Shopping
+CHALLENGER,Shopping
+POPULAR BOOK,Shopping
+THE GIOI DI DONG,Shopping
+DIEN MAY XANH,Shopping
+FPT SHOP,Shopping
+CELLPHONES,Shopping
+ 
+# ===== Subscriptions =====
+SPOTIFY,Subscriptions
+NETFLIX,Subscriptions
+DISNEY,Subscriptions
+YOUTUBE,Subscriptions
+APPLE.COM/BILL,Subscriptions
+ICLOUD,Subscriptions
+OPENAI,Subscriptions
+CHATGPT,Subscriptions
+ANTHROPIC,Subscriptions
+CLAUDE.AI,Subscriptions
+FPT PLAY,Subscriptions
+VIEON,Subscriptions
+ 
+# ===== Phone & internet =====
+SINGTEL,Phone & Internet
+STARHUB,Phone & Internet
+M1 LIMITED,Phone & Internet
+CIRCLES.LIFE,Phone & Internet
+GOMO,Phone & Internet
+VIETTEL,Phone & Internet
+VINAPHONE,Phone & Internet
+MOBIFONE,Phone & Internet
+ 
+# ===== Bills & utilities =====
+SP SERVICES,Bills
+SP GROUP,Bills
+EVN,Bills
+DIEN LUC,Bills
+CAP NUOC,Bills
+ 
+# ===== Entertainment =====
+GOLDEN VILLAGE,Entertainment
+SHAW THEATRES,Entertainment
+CATHAY CINEPLEX,Entertainment
+STEAM,Entertainment
+KLOOK,Entertainment
+CGV,Entertainment
+LOTTE CINEMA,Entertainment
+GALAXY CINEMA,Entertainment
+BHD,Entertainment
+ 
+# ===== Travel =====
+SCOOT,Travel
+SINGAPORE AIRLINES,Travel
+AIRASIA,Travel
+JETSTAR,Travel
+VIETJET,Travel
+VIETNAM AIRLINES,Travel
+BAMBOO AIRWAYS,Travel
+AGODA,Travel
+BOOKING.COM,Travel
+TRAVELOKA,Travel
+AIRBNB,Travel
+TRIP.COM,Travel
+ 
+# ===== Education =====
+COURSERA,Education
+UDEMY,Education
+ 
+# ===== Transfers =====
+PAYNOW,Transfers
+CHUYEN KHOAN,Transfers
+ 
