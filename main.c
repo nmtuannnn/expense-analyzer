@@ -100,7 +100,7 @@ int main(void) {
     printf("%-12s %-20s %10s\n", "----------", "--------------------", "----------");  
 
     for (int i = 0; i < count; i++) {
-        printf("%-12s %-20.20s %7ld.%02ld\n",          // ← SỬA
+        printf("%-12s %-20.20s %7ld.%02ld\n",         
                transactions[i].date,
                transactions[i].description,
                transactions[i].amount_cents / 100,
