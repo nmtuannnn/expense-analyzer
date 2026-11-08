@@ -9,6 +9,8 @@ int main(void) {
     }
 
     char line[256];
+    long total = 0;
+
     fgets(line, sizeof(line), file);
     while (fgets(line, sizeof(line), file) != NULL) {
 
@@ -18,13 +20,19 @@ int main(void) {
         char *desc = strtok(NULL, ",");
         char *amount = strtok(NULL, ",");
 
-        if (date == NULL || desc == NULL || amount == NULL){
+        if (date == NULL || desc == NULL || amount == NULL) {
             printf("Error!!\n");
             continue;
         }
 
+        long dollars, cents;
+        int n = sscanf(amount, "%ld.%ld", &dollars, &cents);
+        long amount_cents = dollars * 100 + cents;
+        total += amount_cents;
+
         printf("Date: %s | Description: %s | Amount: %s\n", date, desc, amount);
     }
+    printf("Total amount of money: %ld.%02ld\n", total / 100, total % 100);
     fclose(file);
     return 0;
 }
